@@ -21,6 +21,11 @@ public class Piece{
 
 
     public void shiftDownContinuously(){
+        
+        piece[i][1]--;
+        
+    }
+
     }
 
 
