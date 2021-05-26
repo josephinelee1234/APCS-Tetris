@@ -78,6 +78,14 @@ public class Piece{
     public void down(){
 
     }
+    
+    public int[][] getCoords() {
+      return shape;
+    }
+    
+    public color getColor() {
+      return c;
+    }
 
 
 

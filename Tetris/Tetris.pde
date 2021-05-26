@@ -1,4 +1,4 @@
-Background bg;//changed to bg
+Background bg = new Background();
 public void setup(){
   size(1000,1000);
   //The board is made up of a 10x20 grid of 50x50 squares.
@@ -10,9 +10,11 @@ public void setup(){
   for (int i=0; i<500 ; i+=50) {
     line(i,0,i,1000);
   }
+  
 }
 void draw(){
     background(0);
+    bg.display();
     stroke(150);
     for (int i=0; i<1000 ; i+=50) {
       line(0,i,500,i);
@@ -20,7 +22,6 @@ void draw(){
     for (int i=0; i<=500 ; i+=50) {
       line(i,0,i,1000);
     }
-    //bg.display();
     drawPieces();//changed from drawShapes to drawPieces
     fill(200);
     textSize(20);
