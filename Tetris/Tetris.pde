@@ -1,9 +1,9 @@
-Background backgr;
+Background bg;//changed to bg
 public void setup(){
 }
 void draw(){
     bg.display();
-    drawShapes();
+    drawPieces();//changed from draShapes to drawPieces
 }
 void drawPieces(){
 }

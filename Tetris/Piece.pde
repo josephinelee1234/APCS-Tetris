@@ -1,4 +1,5 @@
 public class Piece{
+    private int[][] shape;//added this to keep track of coordinates
 
     private int[][] square = {{1,1}, {1,0},{0,1}, {0,0}};
     private int[][] rightL = {{0,0}, {1,0}, {2,0}, {0,1}};
@@ -22,14 +23,16 @@ public class Piece{
 
     public void shiftDownContinuously(){
         
-        piece[i][1]--;
+      for (int i=0; i<shape.length ;i++) {
+        shape[i][1]--;
+      }
         
     }
 
-    }
 
 
     public boolean checkSidesForBounds(String side){
+      return true;
     }
 
     public void left(){
