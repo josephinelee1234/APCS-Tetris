@@ -8,3 +8,5 @@ Differently shaped tetrominoes fall from the top of the grid. A completed row cl
 **5/25:** Josephine: I constructed all the methods outlined in our current UML design. I also created private int[][] for each of the 7 shapes and completed shiftDownContinuously() in Piece.pde and void draw() in Tetris.pde
 
 **5/25:** Alexander: Created the background and added the background reset to draw(). Added a color variable and an isActive variable to Piece. Created a skeleton for the Piece constructor; it still needs different colors, and the coordinates will either be changed here or adapted by the display.
+
+**5/26** Alexander + Josephine: We created the constructor for the Background class and its display(). We started the left(), right(), and down() for Piece, but they still need to check for occupied spaces.
