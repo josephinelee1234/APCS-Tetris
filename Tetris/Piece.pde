@@ -1,6 +1,7 @@
 public class Piece{
     private int[][] shape;//added this to keep track of coordinates
     private color c;
+    private boolean isActive;
 
     private int[][] square = {{1,1}, {1,0},{0,1}, {0,0}};
     private int[][] rightL = {{0,0}, {1,0}, {2,0}, {0,1}};
@@ -16,6 +17,8 @@ public class Piece{
 
     public Piece(){
       //We'll need to play around with the colors
+      //Also they will need spawn them in the top center of the board
+      isActive = true;
       int num = (int)(Math.random()*7);
       if (num==0) {
         c = color(100,0,0);
