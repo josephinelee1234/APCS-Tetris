@@ -70,13 +70,46 @@ public class Piece{
     }
 
     public void left(){
-
+      boolean legalMove = true;
+      for (int i=0; i<shape.length ;i++) {
+        if (shape[i][0]==0) {
+          legalMove = false;
+        }
+        //need to check for other pieces as well
+      }
+      if (legalMove) {
+        for (int i=0; i<shape.length ;i++) {
+          shape[i][0]--;
+        }
+      }
     }
     public void right(){
-
+      boolean legalMove = true;
+      for (int i=0; i<shape.length ;i++) {
+        if (shape[i][0]==9) {
+          legalMove = false;
+        }
+        //need to check for other pieces as well
+      }
+      if (legalMove) {
+        for (int i=0; i<shape.length ;i++) {
+          shape[i][0]++;
+        }
+      }
     }
     public void down(){
-
+      boolean legalMove = true;
+      for (int i=0; i<shape.length ;i++) {
+        if (shape[i][1]==19) {
+          legalMove = false;
+        }
+        //need to check for other pieces as well
+      }
+      if (legalMove) {
+        for (int i=0; i<shape.length ;i++) {
+          shape[i][1]++;
+        }
+      }
     }
     
     public int[][] getCoords() {
