@@ -4,3 +4,5 @@ Group Name: Tete-a-Tetris <br />
 Group Member names: Alexander Dickerson, Josephine Lee <br />
 # Brief Project Description: 
 Differently shaped tetrominoes fall from the top of the grid. A completed row clears the row and the remaining blocks above the completed row shift down, and the score increases. The game ends when the user can not play the current piece because the user tries to play a piece that does not fit in the window.
+# Log
+**5/25:** Josephine: I constructed all the methods outlined in our current UML design. I also created private int[][] for each of the 7 shapes and completed shiftDownContinuously() in Piece.pde and void draw() in Tetris.pde
