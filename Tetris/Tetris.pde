@@ -1,4 +1,5 @@
 Background bg = new Background();
+Piece piece;
 public void setup(){
   size(1000,1000);
   //The board is made up of a 10x20 grid of 50x50 squares.
@@ -32,4 +33,10 @@ void drawPieces(){
 public void keyReleased(){
 }
 public void keyPressed(){
+  if(keyCode==UP){
+      for(int i = 0; i < 4; i++){
+        piece.rotatePiece();
+      }
+      piece.rotationCount++;
+    }
 }
