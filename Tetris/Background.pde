@@ -44,5 +44,7 @@ public class Background{
     public void dropAboveLines(int row){
     }
     public void removeFullLine(int row){
+        //stuff
+        dropAboveLines(row);
     }
 }
