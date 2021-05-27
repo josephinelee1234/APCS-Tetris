@@ -2,6 +2,8 @@ public class Background{
     private int score;
     private int[][] board;
     private Piece current;
+    private int x,y; //x and y coordinate of the active piece
+
     
     public Background(){
       board = new int[20][10];
@@ -14,6 +16,11 @@ public class Background{
     }
     
     public void writePiece(Piece p){//changed shape to Piece
+        for(int i = 0; i < 4; i++){
+          x = p.shape[i][0];  
+          y = p.shape[i][1];
+        }
+        //still need to add its colors?
     }
     public void display(){
       for (int i=0; i<board.length; i++) {//y coord
