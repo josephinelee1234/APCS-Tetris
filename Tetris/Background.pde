@@ -106,7 +106,7 @@ public class Background{
       }
     }
     
-    public void down(){
+    public boolean down(){
       int[][] p = current.getCoords();
       boolean legalMove = true;
       for (int i=0; i<p.length ;i++) {
@@ -131,10 +131,15 @@ public class Background{
           board[p[i][1]][p[i][0]] = current.getColor();
         }
       }
+      return legalMove;
     }
     
     public void rotatePiece(){
       //current.rotatePiece();
+    }
+    
+    public void newPiece() {
+      current = new Piece();
     }
     
     public boolean checkForLine(int row){

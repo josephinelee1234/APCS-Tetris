@@ -35,7 +35,9 @@ void draw(){
       time++;
     }
     else {
-      bg.down();
+      if (! bg.down()) {
+        bg.newPiece();
+      }
       time = 0;
       targetTime-=.01;
     }
