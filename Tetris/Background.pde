@@ -1,18 +1,27 @@
 public class Background{
     private int score;
-    private int[][] board;
+    private color[][] board;
     private Piece current;
     private int x,y; //x and y coordinate of the active piece
 
     
     public Background(){
       board = new int[20][10];
+      for (int i=0; i<board.length; i++) {
+        for (int j=0; j<board[i].length; j++) {
+          board[i][j] = color(0,0,0);
+        }
+      }
       score = 0;
       current = new Piece();
       int[][] p = current.getCoords();
       for (int i=0; i<p.length; i++) {
         board[p[i][0]][p[i][1]] = current.getColor();
       }
+    }
+    
+    public int getScore() {
+      return score;
     }
     
     public void writePiece(Piece p){//changed shape to Piece
@@ -22,6 +31,7 @@ public class Background{
         }
         //still need to add its colors?
     }
+    
     public void display(){
       for (int i=0; i<board.length; i++) {//y coord
         for (int j=0; j<board[i].length; j++) {//x coord
@@ -38,8 +48,40 @@ public class Background{
         }
       }
     }
+    
+    public void right(){
+      int[][] p = current.getCoords();
+      boolean legalMove = true;
+      for (int i=0; i<p.length ;i++) {
+        if (board[p[i][0]+1][p[i][1]]!=color(0,0,0) && board[p[i][0]+1][p[i][1]]!=current.getColor()) {
+          legalMove = false;
+        }
+        
+        //checking for bounds happens in Piece
+      }
+      if (legalMove) {
+        for (int i=0; i<p.length ;i++) {
+          board[p[i][0]][p[i][1]] = color(0,0,0);
+          board[p[i][0]+1][p[i][1]] = current.getColor();
+        }
+        current.right();
+      }
+    }
+    
+    public void left(){
+      current.left();
+    }
+    
+    public void down(){
+      current.down();
+    }
+    
+    public void rotatePiece(){
+      //current.rotatePiece();
+    }
+    
     public boolean checkForLine(int row){
-      return true;
+      return false;
     }
     public void dropAboveLines(int row){
     }

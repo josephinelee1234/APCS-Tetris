@@ -32,15 +32,7 @@ void draw(){
 void drawPieces(){
 }
 public void keyReleased(){
-  if(keyCode==RIGHT/* && piece.checkSide("RIGHT")*/){//changed shape to piece
-      bg.right();
-    } 
-  else if(keyCode==LEFT/* && piece.checkSide("LEFT")*/){//changed shape to piece
-      bg.left();
-    } 
-  else if(keyCode==DOWN/* && piece.checkSide("DOWN")*/){//changed shape to piece
-      bg.down();
-  } 
+  //moved to keyPressed()
 }
 public void keyPressed(){
   //println(keyCode);

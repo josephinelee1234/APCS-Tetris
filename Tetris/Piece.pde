@@ -22,31 +22,31 @@ public class Piece{
       isActive = true;
       int num = (int)(Math.random()*7);
       if (num==0) {
-        c = color(100,0,0);
+        c = color(200,0,0);
         shape = square.clone();
       }
       else if (num==1) {
-        c = color(100,0,0);
+        c = color(200,0,0);
         shape = rightL.clone();
       }
       else if (num==2) {
-        c = color(100,0,0);
+        c = color(200,0,0);
         shape = leftL.clone();
       }
       else if (num==3) {
-        c = color(100,0,0);
+        c = color(200,0,0);
         shape = tri.clone();
       }
       else if (num==4) {
-        c = color(100,0,0);
+        c = color(200,0,0);
         shape = line.clone();
       }
       else if (num==5) {
-        c = color(100,0,0);
+        c = color(200,0,0);
         shape = s2.clone();
       }
       else if (num==6) {
-        c = color(100,0,0);
+        c = color(200,0,0);
         shape = s.clone();
       }
     }
