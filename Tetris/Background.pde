@@ -16,7 +16,7 @@ public class Background{
       current = new Piece();
       int[][] p = current.getCoords();
       for (int i=0; i<p.length; i++) {
-        board[p[i][0]][p[i][1]] = current.getColor();
+        board[p[i][1]][p[i][0]] = current.getColor();
       }
     }
     
@@ -53,7 +53,11 @@ public class Background{
       int[][] p = current.getCoords();
       boolean legalMove = true;
       for (int i=0; i<p.length ;i++) {
-        if (board[p[i][0]+1][p[i][1]]!=color(0,0,0) && board[p[i][0]+1][p[i][1]]!=current.getColor()) {
+        if (p[i][0]+1 > 9) {
+          legalMove = false;
+          
+        }
+        else if (board[p[i][1]][p[i][0]+1]!=color(0,0,0) && board[p[i][1]][p[i][0]+1]!=current.getColor()) {//will intersect with pieces of the same color MUST BE CHANGED!!!
           legalMove = false;
         }
         
@@ -61,8 +65,8 @@ public class Background{
       }
       if (legalMove) {
         for (int i=0; i<p.length ;i++) {
-          board[p[i][0]][p[i][1]] = color(0,0,0);
-          board[p[i][0]+1][p[i][1]] = current.getColor();
+          board[p[i][1]][p[i][0]] = color(0,0,0);
+          board[p[i][1]][p[i][0]+1] = current.getColor();
         }
         current.right();
       }
