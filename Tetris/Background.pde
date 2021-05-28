@@ -54,14 +54,11 @@ public class Background{
       boolean legalMove = true;
       for (int i=0; i<p.length ;i++) {
         if (p[i][0]+1 > 9) {
-          legalMove = false;
-          
+          legalMove = false; 
         }
         else if (board[p[i][1]][p[i][0]+1]!=color(0,0,0) && board[p[i][1]][p[i][0]+1]!=current.getColor()) {//will intersect with pieces of the same color MUST BE CHANGED!!!
           legalMove = false;
         }
-        
-        //checking for bounds happens in Piece
       }
       if (legalMove) {
         for (int i=0; i<p.length ;i++) {
@@ -73,11 +70,11 @@ public class Background{
     }
     
     public void left(){
-      current.left();
+      //current.left();
     }
     
     public void down(){
-      current.down();
+      //current.down();
     }
     
     public void rotatePiece(){
