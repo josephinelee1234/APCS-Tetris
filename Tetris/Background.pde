@@ -49,7 +49,7 @@ public class Background{
       }
     }
     
-    public void right(){
+    public void right(){//"Only the 2x2 square doesn't break. For every other shape only the right most 'pixels' appear."
       int[][] p = current.getCoords();
       boolean legalMove = true;
       for (int i=0; i<p.length ;i++) {

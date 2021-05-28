@@ -85,7 +85,7 @@ public class Piece{
       }
     }
     public void right(){
-      boolean legalMove = true;
+      /*boolean legalMove = true;
       for (int i=0; i<shape.length ;i++) {
         if (shape[i][0]==9) {
           legalMove = false;
@@ -96,7 +96,10 @@ public class Piece{
         for (int i=0; i<shape.length ;i++) {
           shape[i][0]++;
         }
-      }
+      }*/
+      for (int i=0; i<shape.length ;i++) {
+        shape[i][0]++;
+      }//logic now down in background so it's pointless here
     }
     public void down(){
       boolean legalMove = true;
