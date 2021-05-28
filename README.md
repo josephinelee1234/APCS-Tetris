@@ -16,3 +16,7 @@ Differently shaped tetrominoes fall from the top of the grid. A completed row cl
 **5/27:** Josephine: I completed keyPressed() and added a rotationCount private variable. Then, I wrote writePiece(Piece p) using the x and y coordinates of the piece. I also completed keyReleased() using the methods we wrote yesterday and started removeFullLine(row). Made slight changes to the format.
 
 **5/27:** Alexander: Modified keyPressed() to work with the new system for moving pieces through background. right() is almost done, it just needs to check for coordinates rather than color (fixed the issue where only the right most pixels were rendered). Set up the score to actually display the score rather than a temporary constant and created getScore().
+
+**5/28:** Josephine: Completed left(), right(), and down(). Added timer to automatically drop pieces and go faster. Created a system to make new a piece when the current one can't go down any more. Added different colors to differently shaped pieces.
+
+**5/28:** Alexander: Completed left(), right(), and down(). Added timer to automatically drop pieces and go faster. Created a system to make new a piece when the current one can't go down any more. Added different colors to differently shaped pieces.
