@@ -1,5 +1,7 @@
 Background bg = new Background();
 Piece piece;
+int time = 0;
+float targetTime = 50;
 public void setup(){
   size(1000,1000);
   //The board is made up of a 10x20 grid of 50x50 squares.
@@ -28,7 +30,17 @@ void draw(){
     fill(200);
     textSize(40);
     text("Score: " + bg.getScore(),700,200);
+    
+    if (time < targetTime) {
+      time++;
+    }
+    else {
+      bg.down();
+      time = 0;
+      targetTime-=.01;
+    }
 }
+
 void drawPieces(){
 }
 public void keyReleased(){
