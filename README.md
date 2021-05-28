@@ -14,3 +14,5 @@ Differently shaped tetrominoes fall from the top of the grid. A completed row cl
 **5/26:** Alexander: We created the constructor for the Background class and its display(). We started the left(), right(), and down() for Piece, but they still need to check for occupied spaces. Access methods getCoords() and getColor() were added to Piece for the Background methods.
 
 **5/27:** Josephine: I completed keyPressed() and added a rotationCount private variable. Then, I wrote writePiece(Piece p) using the x and y coordinates of the piece. I also completed keyReleased() using the methods we wrote yesterday and started removeFullLine(row). Made slight changes to the format.
+
+**5/27:** Alexander: Modified keyPressed() to work with the new system for moving pieces through background. right() is semi-functional, only the right most "pixels" are rendered, everything else disappears after the first move. Set up the score to actually display the score rather than a temporary constant and created getScore().
