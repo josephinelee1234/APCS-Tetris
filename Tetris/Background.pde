@@ -63,6 +63,8 @@ public class Background{
       if (legalMove) {
         for (int i=0; i<p.length ;i++) {
           board[p[i][1]][p[i][0]] = color(0,0,0);
+        }
+        for (int i=0; i<p.length ;i++) {
           board[p[i][1]][p[i][0]+1] = current.getColor();
         }
         current.right();
