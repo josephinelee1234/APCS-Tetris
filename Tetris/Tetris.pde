@@ -27,26 +27,36 @@ void draw(){
     drawPieces();//changed from drawShapes to drawPieces
     fill(200);
     textSize(40);
-    text("Score: "+"0",700,200);//Needs to be updated when we create score system
+    text("Score: " + bg.getScore(),700,200);
 }
 void drawPieces(){
 }
 public void keyReleased(){
-  if(keyCode==RIGHT && shape.checkSide("RIGHT")){
-      right();
+  if(keyCode==RIGHT/* && piece.checkSide("RIGHT")*/){//changed shape to piece
+      bg.right();
     } 
-  else if(keyCode==LEFT && shape.checkSide("LEFT")){
-      left();
+  else if(keyCode==LEFT/* && piece.checkSide("LEFT")*/){//changed shape to piece
+      bg.left();
     } 
-  else if(keyCode==DOWN && shape.checkSide("DOWN")){
-      down();
+  else if(keyCode==DOWN/* && piece.checkSide("DOWN")*/){//changed shape to piece
+      bg.down();
   } 
 }
 public void keyPressed(){
+  //println(keyCode);
   if(keyCode==UP){
       for(int i = 0; i < 4; i++){
-        piece.rotatePiece();
+        bg.rotatePiece();
       }
-      piece.rotationCount++;
-    }
+      //piece.rotationCount++;//we can do this in rotatePiece()
+  }
+  if(keyCode==RIGHT/* && piece.checkSide("RIGHT")*/){//changed shape to piece
+      bg.right();
+    } 
+  else if(keyCode==LEFT/* && piece.checkSide("LEFT")*/){//changed shape to piece
+      bg.left();
+    } 
+  else if(keyCode==DOWN/* && piece.checkSide("DOWN")*/){//changed shape to piece
+      bg.down();
+  }
 }
