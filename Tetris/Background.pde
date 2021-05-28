@@ -53,10 +53,13 @@ public class Background{
       int[][] p = current.getCoords();
       boolean legalMove = true;
       for (int i=0; i<p.length ;i++) {
+          board[p[i][1]][p[i][0]] = color(0,0,0);
+      }
+      for (int i=0; i<p.length ;i++) {
         if (p[i][0]+1 > 9) {
           legalMove = false; 
         }
-        else if (board[p[i][1]][p[i][0]+1]!=color(0,0,0) && board[p[i][1]][p[i][0]+1]!=current.getColor()) {//will intersect with pieces of the same color MUST BE CHANGED!!!
+        else if (board[p[i][1]][p[i][0]+1]!=color(0,0,0)) {
           legalMove = false;
         }
       }
@@ -69,14 +72,65 @@ public class Background{
         }
         current.right();
       }
+      else {
+        for (int i=0; i<p.length ;i++) {
+          board[p[i][1]][p[i][0]] = current.getColor();
+        }
+      }
     }
     
     public void left(){
-      //current.left();
+      int[][] p = current.getCoords();
+      boolean legalMove = true;
+      for (int i=0; i<p.length ;i++) {
+          board[p[i][1]][p[i][0]] = color(0,0,0);
+      }
+      for (int i=0; i<p.length ;i++) {
+        if (p[i][0]-1 < 0) {
+          legalMove = false; 
+        }
+        else if (board[p[i][1]][p[i][0]-1]!=color(0,0,0)) {
+          legalMove = false;
+        }
+      }
+      if (legalMove) {
+        for (int i=0; i<p.length ;i++) {
+          board[p[i][1]][p[i][0]-1] = current.getColor();
+        }
+        current.left();
+      }
+      else {
+        for (int i=0; i<p.length ;i++) {
+          board[p[i][1]][p[i][0]] = current.getColor();
+        }
+      }
     }
     
     public void down(){
-      //current.down();
+      int[][] p = current.getCoords();
+      boolean legalMove = true;
+      for (int i=0; i<p.length ;i++) {
+          board[p[i][1]][p[i][0]] = color(0,0,0);
+      }
+      for (int i=0; i<p.length ;i++) {
+        if (p[i][1]+1 > 19) {
+          legalMove = false; 
+        }
+        else if (board[p[i][1]+1][p[i][0]]!=color(0,0,0)) {
+          legalMove = false;
+        }
+      }
+      if (legalMove) {
+        for (int i=0; i<p.length ;i++) {
+          board[p[i][1]+1][p[i][0]] = current.getColor();
+        }
+        current.down();
+      }
+      else {
+        for (int i=0; i<p.length ;i++) {
+          board[p[i][1]][p[i][0]] = current.getColor();
+        }
+      }
     }
     
     public void rotatePiece(){
