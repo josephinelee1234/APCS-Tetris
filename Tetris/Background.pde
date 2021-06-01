@@ -143,7 +143,16 @@ public class Background{
     }
     
     public boolean checkForLine(int row){
-      return false;
+      boolean complete = true;
+      for (int i = 0; i<10; i++) {
+        if (board[row][i] == color(0,0,0)) {
+          complete = false;
+        }
+      }
+      if (complete) {
+        removeFullLine(row);
+      }
+      return complete;
     }
     public void dropAboveLines(int row){
     }
