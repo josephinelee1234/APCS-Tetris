@@ -150,11 +150,24 @@ public class Background{
         }
       }
       if (complete) {
-        removeFullLine(row);
+        //removeFullLine(row);
+        score+=100;
+        dropAboveLines(row);
       }
       return complete;
     }
     public void dropAboveLines(int row){
+      if (row==0) {
+        for (int i=0; i<10; i++) {
+          board[row][i] = color(0,0,0);
+        }
+      }
+      else {
+        for (int i=0; i<10; i++) {
+          board[row][i] = board[row-1][i];
+        }
+        dropAboveLines(row-1);
+      }
     }
     public void removeFullLine(int row){
         //stuff
