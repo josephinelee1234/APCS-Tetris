@@ -34,6 +34,7 @@ void draw(){
     text("Score: " + bg.getScore(),700,200);
     if (bg.over()) {
       text("Game Over",700,500);
+      text("Click to Restart",600,600);
     }
     else {
     if (time < targetTime) {
@@ -75,5 +76,11 @@ public void keyPressed(){
     if (! bg.over()) {
       bg.down();
     }
+  }
+}
+
+void mouseClicked() {
+  if (bg.over()){
+    bg.restart();
   }
 }

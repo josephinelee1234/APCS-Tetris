@@ -185,4 +185,20 @@ public class Background{
     public boolean over() {
       return GameOver;
     }
+    public void restart(){
+      score = 0;
+      board = new int[20][10];
+      for (int i=0; i<board.length; i++) {
+        for (int j=0; j<board[i].length; j++) {
+          board[i][j] = color(0,0,0);
+        }
+      }
+      current = new Piece();
+      GameOver = false;
+      int[][] p = current.getCoords();
+      for (int i=0; i<p.length; i++) {
+        board[p[i][1]][p[i][0]] = current.getColor();
+      }
+
+    }
 }
