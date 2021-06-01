@@ -40,11 +40,11 @@ public class Background{
           rect(j*50,i*50,50,50);
         }
       }
-      for (int row=0; row<board.length; row++) {
+      for (int row=19; row>0; row--) {
         if (checkForLine(row)) {
-          removeFullLine(row);
-          dropAboveLines(row);
-          score+=100;
+          //removeFullLine(row);
+          //dropAboveLines(row);
+          //score+=100;
         }
       }
     }
