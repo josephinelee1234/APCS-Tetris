@@ -3,6 +3,7 @@ public class Background{
     private color[][] board;
     private Piece current;
     private int x,y; //x and y coordinate of the active piece
+    private boolean GameOver;
 
     
     public Background(){
@@ -14,6 +15,7 @@ public class Background{
       }
       score = 0;
       current = new Piece();
+      GameOver = false;
       int[][] p = current.getCoords();
       for (int i=0; i<p.length; i++) {
         board[p[i][1]][p[i][0]] = current.getColor();
@@ -139,7 +141,12 @@ public class Background{
     }
     
     public void newPiece() {
-      current = new Piece();
+      if (board[0][0] == color(0,0,0)) {
+        current = new Piece();
+      }
+      else {
+        GameOver = true;
+      }
     }
     
     public boolean checkForLine(int row){
@@ -172,5 +179,9 @@ public class Background{
     public void removeFullLine(int row){
         //stuff
         dropAboveLines(row);
+    }
+    
+    public boolean over() {
+      return GameOver;
     }
 }

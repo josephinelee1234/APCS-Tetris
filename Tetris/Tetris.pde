@@ -2,6 +2,8 @@ Background bg = new Background();
 Piece piece;
 int time = 0;
 float targetTime = 50;
+boolean gameOver = false;
+
 public void setup(){
   size(1000,1000);
   //The board is made up of a 10x20 grid of 50x50 squares.
@@ -26,11 +28,14 @@ void draw(){
     for (int i=0; i<=500 ; i+=50) {
       line(i,0,i,1000);
     }
-    drawPieces();//changed from drawShapes to drawPieces
+    drawPieces();
     fill(200);
     textSize(40);
     text("Score: " + bg.getScore(),700,200);
-    
+    if (bg.over()) {
+      text("Game Over",700,500);
+    }
+    else {
     if (time < targetTime) {
       time++;
     }
@@ -40,6 +45,7 @@ void draw(){
       }
       time = 0;
       targetTime-=.01;
+    }
     }
 }
 
@@ -54,15 +60,20 @@ public void keyPressed(){
       for(int i = 0; i < 4; i++){
         bg.rotatePiece();
       }
-      //piece.rotationCount++;//we can do this in rotatePiece()
   }
-  if(keyCode==RIGHT/* && piece.checkSide("RIGHT")*/){//changed shape to piece
+  if(keyCode==RIGHT){
+    if (! bg.over()) {
       bg.right();
-    } 
-  else if(keyCode==LEFT/* && piece.checkSide("LEFT")*/){//changed shape to piece
+    }
+  } 
+  else if(keyCode==LEFT){
+    if (! bg.over()) {
       bg.left();
-    } 
-  else if(keyCode==DOWN/* && piece.checkSide("DOWN")*/){//changed shape to piece
+    }
+  } 
+  else if(keyCode==DOWN){
+    if (! bg.over()) {
       bg.down();
+    }
   }
 }
