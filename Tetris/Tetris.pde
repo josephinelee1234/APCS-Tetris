@@ -32,6 +32,7 @@ void draw(){
     fill(200);
     textSize(40);
     text("Score: " + bg.getScore(),700,200);
+    text("High Score: " + bg.getHighScore(),600,300);
     if (bg.over()) {
       text("Game Over",700,500);
       text("Click to Restart",600,600);

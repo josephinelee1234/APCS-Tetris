@@ -1,5 +1,6 @@
 public class Background{
     private int score;
+    private int highScore;
     private color[][] board;
     private Piece current;
     private int x,y; //x and y coordinate of the active piece
@@ -14,6 +15,7 @@ public class Background{
         }
       }
       score = 0;
+      highScore = 0;
       current = new Piece();
       GameOver = false;
       int[][] p = current.getCoords();
@@ -183,6 +185,10 @@ public class Background{
     }
     
     public boolean over() {
+      
+      if (score > highScore){
+        highScore = score;
+      }
       return GameOver;
     }
     public void restart(){
@@ -200,5 +206,8 @@ public class Background{
         board[p[i][1]][p[i][0]] = current.getColor();
       }
 
+    }
+    public int getHighScore(){
+      return highScore;
     }
 }
