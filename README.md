@@ -20,3 +20,5 @@ Differently shaped tetrominoes fall from the top of the grid. A completed row cl
 **5/28:** Josephine: Completed left(), right(), and down(). Added timer to automatically drop pieces and go faster. Created a system to make new a piece when the current one can't go down any more. Added different colors to differently shaped pieces.
 
 **5/28:** Alexander: Completed left(), right(), and down(). Added timer to automatically drop pieces and go faster. Created a system to make new a piece when the current one can't go down any more. Added different colors to differently shaped pieces.
+
+**5/31:** Alexander: Completed checkForLine() and dropAboveLines(). Handled ending the game by stopping piece creation/movement and the text "Game Over" but the board and score are still displayed.
