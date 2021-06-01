@@ -168,6 +168,7 @@ public class Background{
         for (int i=0; i<10; i++) {
           board[row][i] = color(0,0,0);
         }
+        current = new Piece();
       }
       else {
         for (int i=0; i<10; i++) {
