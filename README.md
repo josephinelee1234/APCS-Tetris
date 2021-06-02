@@ -24,3 +24,7 @@ Differently shaped tetrominoes fall from the top of the grid. A completed row cl
 **5/31:** Alexander: Completed checkForLine() and dropAboveLines(). Handled ending the game by stopping piece creation/movement and the text "Game Over" but the board and score are still displayed.
 
 **6/1:** Josephine: Found bug in dropAboveLines(). Added mousePressed() and restart() for restarting the game after it is lost. Added and displayed the high score.
+
+**6/2:** Alexander: Fixed a bug where the red piece didn't end the game due to how it was positioned. Started rotation by creating arrays for line and the red s and a temporary tester.
+
+**6/2:** Josephine: Fixed a bug where the red piece didn't end the game due to how it was positioned. Started rotation by creating arrays for line and the red s and a temporary tester.
