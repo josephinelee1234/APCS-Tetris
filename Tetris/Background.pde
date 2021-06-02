@@ -158,7 +158,7 @@ public class Background{
           complete = false;
         }
       }
-      if (complete) {
+      if (complete && !down()) {
         //removeFullLine(row);
         score+=100;
         dropAboveLines(row);
