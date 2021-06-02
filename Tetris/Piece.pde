@@ -5,20 +5,27 @@ public class Piece{
     private int rotationCount;
 
     private int[][] square = {{1,1}, {1,0},{0,1}, {0,0}};
+    //0
     private int[][] rightL = {{0,0}, {1,0}, {2,0}, {0,1}};
+    //3
     private int[][] leftL = {{0,0}, {1,0}, {2,0}, {2,1}};
+    //3
     private int[][] tri = {{0,0}, {1,0}, {2,0}, {1,1}};
+    //3
     private int[][] line = {{0,0}, {1,0}, {2,0}, {3,0}};
+    private int[][] line1 = {{2,-2}, {1,-1}, {0,0}, {-1,1}};
+    
     private int[][] s2 = {{0,1}, {1,1}, {1,0}, {2, 0}};
+    private int[][] s21 = {{1,-2}, {0,1}, {1,0}, {0,-1}};
+    
     private int[][] s = {{0,0}, {1,0}, {1,1}, {2,1}};
+    //1
 
     public void display(){
 
     }
 
     public Piece(){
-      //We'll need to play around with the colors
-      //Also they will need spawn them in the top center of the board
       isActive = true;
       int num = (int)(Math.random()*7);
       if (num==0) {
@@ -49,10 +56,23 @@ public class Piece{
         c = color(0,200,0);
         shape = s.clone();
       }
+      //FIX THIS LATER
+      c = color(0,100,200);
+      shape = line.clone();
     }
 
     public void rotatePiece(){
-
+      rotationCount++;
+      for (int i=0; i<shape.length; i++) {
+        for (int j=0; j<shape[i].length; j++) {
+          if (rotationCount%2==1) {
+            shape[i][j] += line1[i][j];
+          }
+          if (rotationCount%2==0) {
+            shape[i][j] -= line1[i][j];
+          }
+        }
+      }
     }
 
 

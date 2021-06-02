@@ -139,7 +139,15 @@ public class Background{
     }
     
     public void rotatePiece(){
-      //current.rotatePiece();
+      int[][] p = current.getCoords();
+      for (int i=0; i<p.length; i++) {
+        board[p[i][0]][p[i][1]] = color(0,0,0);
+      }
+      current.rotatePiece();
+      p = current.getCoords();
+      for (int i=0; i<p.length; i++) {
+        board[p[i][0]][p[i][1]] = current.getColor();
+      }
     }
     
     public void newPiece() {
