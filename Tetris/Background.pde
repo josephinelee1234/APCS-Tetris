@@ -143,7 +143,7 @@ public class Background{
     }
     
     public void newPiece() {
-      if (board[0][0] == color(0,0,0)) {
+      if (board[0][0] == color(0,0,0) && board[0][1] == color(0,0,0)) {
         current = new Piece();
       }
       else {
