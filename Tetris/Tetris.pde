@@ -59,10 +59,8 @@ public void keyReleased(){
 public void keyPressed(){
   //println(keyCode);
   if(keyCode==UP){
-      for(int i = 0; i < 4; i++){
-        bg.rotatePiece();
+      bg.rotatePiece();
       }
-  }
   if(keyCode==RIGHT){
     if (! bg.over()) {
       bg.right();
