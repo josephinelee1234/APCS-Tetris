@@ -68,8 +68,8 @@ public class Piece{
         shape = s.clone();
       }
       //FIX THIS LATER
-      c = color(0,100,200);
-      shape = line.clone();
+      /*c = color(0,100,200);
+      shape = line.clone();*/
     }
 
     public void rotatePiece(){

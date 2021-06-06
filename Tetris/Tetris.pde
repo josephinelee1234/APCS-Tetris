@@ -1,10 +1,10 @@
-import processing.sound.*;
+//import processing.sound.*;//says this doesn't exist
 Background bg = new Background();
 Piece piece;
 int time = 0;
 float targetTime = 50;
 boolean gameOver = false;
-WhiteNoise noise;
+//WhiteNoise noise;
 
 
 public void setup(){
@@ -39,9 +39,9 @@ void draw(){
     if (bg.over()) {
       text("Game Over",700,500);
       text("Click to Restart",600,600);
-      noise = new WhiteNoise(this);
+      /*noise = new WhiteNoise(this);
       noise.amp(1);
-      noise.play();
+      noise.play();*/
       
 
     }
@@ -88,7 +88,7 @@ public void keyPressed(){
 
 void mouseClicked() {
   if (bg.over()){
-    noise.amp(0);
+    //noise.amp(0);
     bg.restart();
     
   }
