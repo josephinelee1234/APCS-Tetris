@@ -2,6 +2,8 @@
 Prototype: https://docs.google.com/document/d/1BRN-SeDw0srAglKlCprYc-ydPAaK-cCEwl2CCe1ZDyI/edit?usp=sharing <br />
 Group Name: Tete-a-Tetris <br />
 Group Member names: Alexander Dickerson, Josephine Lee <br />
+# Run/Compile Instructions
+Install the Sound library from the Processing Foundation. Run from Processing.
 # Brief Project Description:
 Differently shaped tetrominoes fall from the top of the grid. A completed row clears the row and the remaining blocks above the completed row shift down, and the score increases. The game ends when the user can not play the current piece because the user tries to play a piece that does not fit in the window.
 # Log
@@ -28,3 +30,5 @@ Differently shaped tetrominoes fall from the top of the grid. A completed row cl
 **6/2:** Alexander: Fixed a bug where the red piece didn't end the game due to how it was positioned. Started rotation by creating arrays for line and the red s and a temporary tester.
 
 **6/2:** Josephine: Fixed a bug where the red piece didn't end the game due to how it was positioned. Started rotation by creating arrays for line and the red s and a temporary tester.
+
+**6/6:** Josephine: Added rotation arrays for the rest of the shapes. Fixed error in keyPressed() for rotation. Added sound effect for when the game is over.
