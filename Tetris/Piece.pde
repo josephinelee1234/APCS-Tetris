@@ -1,5 +1,5 @@
 public class Piece{
-    private int[][] shape;//added this to keep track of coordinates
+    private int[][] shape;
     private color c;
     private boolean isActive;
     private int rotationCount;

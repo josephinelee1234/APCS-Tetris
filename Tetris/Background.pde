@@ -139,7 +139,7 @@ public class Background{
     }
     
     public void rotatePiece(){
-      int[][] p = current.getCoords();
+      /*int[][] p = current.getCoords();
       for (int i=0; i<p.length; i++) {
         board[p[i][0]][p[i][1]] = color(0,0,0);
       }
@@ -147,7 +147,34 @@ public class Background{
       p = current.getCoords();
       for (int i=0; i<p.length; i++) {
         board[p[i][0]][p[i][1]] = current.getColor();
+      }*/
+      
+      int[][] p = current.getCoords();
+      boolean legalMove = true;
+      for (int i=0; i<p.length ;i++) {
+          board[p[i][1]][p[i][0]] = color(0,0,0);
       }
+      /*for (int i=0; i<p.length ;i++) {//needs to be modified to check if the rotation is valid -> checkRotate() for Piece class -> returns array of new ints, check for legality
+        if (p[i][1]+1 > 19) {
+          legalMove = false; 
+        }
+        else if (board[p[i][1]+1][p[i][0]]!=color(0,0,0)) {
+          legalMove = false;
+        }
+      }*/
+      if (legalMove) {
+        current.rotatePiece();
+        p = current.getCoords();
+        for (int i=0; i<p.length ;i++) {
+          board[p[i][1]][p[i][0]] = current.getColor();
+        }
+      }
+      else {
+        for (int i=0; i<p.length ;i++) {
+          board[p[i][1]][p[i][0]] = current.getColor();
+        }
+      }
+      
     }
     
     public void newPiece() {
