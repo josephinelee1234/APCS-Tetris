@@ -12,7 +12,10 @@ public class Piece{
     private int[][] rightL3 = {{-1,-1}, {0,0}, {1,1}, {-2,0}};
     //3
     private int[][] leftL = {{0,0}, {1,0}, {2,0}, {2,1}};
-    
+    private int[][] leftL1 = {{1,1}, {0,0}, {-1,-1}, {0,-2}};
+    private int[][] leftL2 = {{1,-1}, {0,0}, {-1,1}, {-2,0}};
+    private int[][] leftL3 = {{-1,-1}, {0,0}, {1,1}, {0,2}};
+
     //3
     private int[][] tri = {{0,0}, {1,0}, {2,0}, {1,1}};
     private int[][] tri1 = {{1,1}, {0,0}, {-1,-1}, {1,-1}};
@@ -26,7 +29,7 @@ public class Piece{
     private int[][] s21 = {{2,0}, {1,-1}, {0,0}, {-1,-1}};//changed to clockwise rotation.
     
     private int[][] s = {{0,0}, {1,0}, {1,1}, {2,1}};
-    private int[][] s2 = {{1,1}, {0,0}, {1,-1}, {0,-2}};
+    private int[][] s1 = {{1,1}, {0,0}, {1,-1}, {0,-2}};
     //1
 
     public void display(){
