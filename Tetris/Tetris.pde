@@ -1,8 +1,11 @@
+import processing.sound.*;
 Background bg = new Background();
 Piece piece;
 int time = 0;
 float targetTime = 50;
 boolean gameOver = false;
+WhiteNoise noise;
+
 
 public void setup(){
   size(1000,1000);
@@ -36,6 +39,11 @@ void draw(){
     if (bg.over()) {
       text("Game Over",700,500);
       text("Click to Restart",600,600);
+      noise = new WhiteNoise(this);
+      noise.amp(1);
+      noise.play();
+      
+
     }
     else {
     if (time < targetTime) {
@@ -80,6 +88,8 @@ public void keyPressed(){
 
 void mouseClicked() {
   if (bg.over()){
+    noise.amp(0);
     bg.restart();
+    
   }
 }
