@@ -67,7 +67,7 @@ public class Piece{
         c = color(0,200,0);
         shape = s.clone();
       }
-      //FIX THIS LATER
+      //FIX THIS LATER (For testing specific pieces only)
       /*c = color(0,100,200);
       shape = line.clone();*/
     }

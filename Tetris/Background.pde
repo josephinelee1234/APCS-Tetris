@@ -33,7 +33,6 @@ public class Background{
           x = p.shape[i][0];  
           y = p.shape[i][1];
         }
-        //still need to add its colors?
     }
     
     public void display(){
@@ -46,9 +45,7 @@ public class Background{
       }
       for (int row=19; row>0; row--) {
         if (checkForLine(row)) {
-          //removeFullLine(row);
-          //dropAboveLines(row);
-          //score+=100;
+          
         }
       }
     }
@@ -138,17 +135,7 @@ public class Background{
       return legalMove;
     }
     
-    public void rotatePiece(){
-      /*int[][] p = current.getCoords();
-      for (int i=0; i<p.length; i++) {
-        board[p[i][0]][p[i][1]] = color(0,0,0);
-      }
-      current.rotatePiece();
-      p = current.getCoords();
-      for (int i=0; i<p.length; i++) {
-        board[p[i][0]][p[i][1]] = current.getColor();
-      }*/
-      
+    public void rotatePiece(){      
       int[][] p = current.getCoords();
       boolean legalMove = true;
       for (int i=0; i<p.length ;i++) {
@@ -173,8 +160,7 @@ public class Background{
         for (int i=0; i<p.length ;i++) {
           board[p[i][1]][p[i][0]] = current.getColor();
         }
-      }
-      
+      } 
     }
     
     public void newPiece() {
