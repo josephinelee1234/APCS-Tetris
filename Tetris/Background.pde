@@ -53,7 +53,7 @@ public class Background{
       }
     }
     
-    public void right(){//"Only the 2x2 square doesn't break. For every other shape only the right most 'pixels' appear."
+    public void right(){
       int[][] p = current.getCoords();
       boolean legalMove = true;
       for (int i=0; i<p.length ;i++) {
@@ -240,9 +240,13 @@ public class Background{
       for (int i=0; i<p.length; i++) {
         board[p[i][1]][p[i][0]] = current.getColor();
       }
-
     }
+    
     public int getHighScore(){
       return highScore;
+    }
+    
+    public void increaseScore(int num){
+      score+=num;
     }
 }

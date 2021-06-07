@@ -81,7 +81,9 @@ public void keyPressed(){
   } 
   else if(keyCode==DOWN){
     if (! bg.over()) {
-      bg.down();
+      if(bg.down()){
+        bg.increaseScore(1);
+      }
     }
   }
 }
@@ -90,6 +92,5 @@ void mouseClicked() {
   if (bg.over()){
     //noise.amp(0);
     bg.restart();
-    
   }
 }
