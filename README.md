@@ -36,3 +36,5 @@ Differently shaped tetrominoes fall from the top of the grid. A completed row cl
 **6/6:** Alexander: Worked on the rotate method in Background to use a method (that will be implemented in class tomorrow) that returns the coordinates if the theoretical rotation. Then it will actually rotate the piece if it is a legal move. Temporarily commented sound code because it didn't compile. Found a bug in which the top of a piece that caused a full row but wasn't part of it isn't moved down all the way.
 
 **6/7:** Alexander: Added increaseScore(int num) to Background so the score could go up by one whenever the player uses the down key to advance the piece.
+
+**6/7:** Josephine: Worked on rotatePiece in Piece.pde. Rotation now works for the square, line, and the red S shape.
