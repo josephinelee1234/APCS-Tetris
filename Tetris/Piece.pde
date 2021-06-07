@@ -3,6 +3,7 @@ public class Piece{
     private color c;
     private boolean isActive;
     private int rotationCount;
+    private int num;
 
     private int[][] square = {{1,1}, {1,0},{0,1}, {0,0}};
     //0
@@ -38,7 +39,7 @@ public class Piece{
 
     public Piece(){
       isActive = true;
-      int num = (int)(Math.random()*7);
+      num = (int)(Math.random()*7);
       if (num==0) {
         c = color(200,200,0);
         shape = square.clone();
@@ -77,10 +78,25 @@ public class Piece{
       for (int i=0; i<shape.length; i++) {
         for (int j=0; j<shape[i].length; j++) {
           if (rotationCount%2==1) {
+            if (num ==4){
             shape[i][j] += line1[i][j];
+            }
+            if (num==5){
+              shape[i][j] += s21[i][j];
+            }
+            if (num==6){
+              shape[i][j] += s2[i][j];
+            }
           }
           if (rotationCount%2==0) {
-            shape[i][j] -= line1[i][j];
+            if (num ==4) {shape[i][j] -= line1[i][j];}
+            if (num==5){
+              shape[i][j] -= s21[i][j];
+            }
+            if (num==6){
+              shape[i][j] -= s2[i][j];
+            }
+
           }
         }
       }
