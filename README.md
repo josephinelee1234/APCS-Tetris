@@ -32,3 +32,5 @@ Differently shaped tetrominoes fall from the top of the grid. A completed row cl
 **6/2:** Josephine: Fixed a bug where the red piece didn't end the game due to how it was positioned. Started rotation by creating arrays for line and the red s and a temporary tester.
 
 **6/6:** Josephine: Added rotation arrays for the rest of the shapes. Fixed error in keyPressed() for rotation. Added sound effect for when the game is over.
+
+**6/6:** Alexander: Worked on the rotate method in Background to use a method (that will be implemented in class tomorrow) that returns the coordinates if the theoretical rotation. Then it will actually rotate the piece if it is a legal move. Temporarily commented sound code because it didn't compile. Found a bug in which the top of a piece that caused a full row but wasn't part of it isn't moved down all the way.
