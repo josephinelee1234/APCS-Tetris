@@ -33,10 +33,6 @@ public class Piece{
     private int[][] s1 = {{1,1}, {0,0}, {1,-1}, {0,-2}};
     //1
 
-    public void display(){
-
-    }
-
     public Piece(){
       isActive = true;
       num = (int)(Math.random()*7);
@@ -103,18 +99,12 @@ public class Piece{
     }
 
 
-    public void shiftDownContinuously(){
+    public void shiftDownContinuously(){//we can do this pretty easily so we may as well
         
       for (int i=0; i<shape.length ;i++) {
         shape[i][1]--;
       }
         
-    }
-
-
-
-    public boolean checkSidesForBounds(String side){
-      return true;
     }
 
     public void left(){
@@ -154,7 +144,6 @@ public class Piece{
         if (shape[i][1]==19) {
           legalMove = false;
         }
-        //need to check for other pieces as well
       }
       if (legalMove) {
         for (int i=0; i<shape.length ;i++) {

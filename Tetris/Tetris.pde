@@ -31,7 +31,6 @@ void draw(){
     for (int i=0; i<=500 ; i+=50) {
       line(i,0,i,1000);
     }
-    drawPieces();
     fill(200);
     textSize(40);
     text("Score: " + bg.getScore(),700,200);
@@ -59,11 +58,6 @@ void draw(){
     }
 }
 
-void drawPieces(){
-}
-public void keyReleased(){
-  //moved to keyPressed()
-}
 public void keyPressed(){
   //println(keyCode);
   if(keyCode==UP){

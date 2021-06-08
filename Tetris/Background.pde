@@ -3,7 +3,6 @@ public class Background{
     private int highScore;
     private color[][] board;
     private Piece current;
-    private int x,y; //x and y coordinate of the active piece
     private boolean GameOver;
 
     
@@ -26,13 +25,6 @@ public class Background{
     
     public int getScore() {
       return score;
-    }
-    
-    public void writePiece(Piece p){//changed shape to Piece
-        for(int i = 0; i < 4; i++){
-          x = p.shape[i][0];  
-          y = p.shape[i][1];
-        }
     }
     
     public void display(){
@@ -212,6 +204,7 @@ public class Background{
       }
       return GameOver;
     }
+    
     public void restart(){
       score = 0;
       board = new int[20][10];
