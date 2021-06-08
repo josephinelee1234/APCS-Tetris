@@ -83,6 +83,18 @@ public class Piece{
             if (num==6){
               shape[i][j] += s2[i][j];
             }
+            if (rotationCount%4==1 && num ==1){
+              shape[i][j] += rightL1[i][j];
+            }
+            if (rotationCount%4==3 && num ==1){
+              shape[i][j] += rightL3[i][j];
+            }
+            if (rotationCount%4==1 && num ==2){
+              shape[i][j] += leftL1[i][j];
+            }
+            if (rotationCount%4==3 && num ==2){
+              shape[i][j] += leftL3[i][j];
+            }
           }
           if (rotationCount%2==0) {
             if (num ==4) {shape[i][j] -= line1[i][j];}
