@@ -119,6 +119,15 @@ public class Piece{
             if (rotationCount%4==2 && num ==3){
               shape[i][j] += tri2[i][j];
             }
+            if (rotationCount%4==0 && num ==1){
+              shape[i][j] = shape[i][j] - (rightL3[i][j]+rightL2[i][j]+rightL1[i][j]) ;
+            }
+            if (rotationCount%4==0 && num ==2){
+              shape[i][j] = shape[i][j] - (leftL3[i][j]+leftL2[i][j]+leftL1[i][j]) ;
+            }
+            if (rotationCount%4==0 && num ==3){
+              shape[i][j] = shape[i][j] - (tri3[i][j]+tri2[i][j]+tri1[i][j]) ;
+            }
 
           }
         }
