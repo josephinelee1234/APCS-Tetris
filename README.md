@@ -38,3 +38,5 @@ Differently shaped tetrominoes fall from the top of the grid. A completed row cl
 **6/7:** Alexander: Added increaseScore(int num) to Background so the score could go up by one whenever the player uses the down key to advance the piece. Removed some unnecessary methods and updated UML to reflect it.
 
 **6/7:** Josephine: Worked on rotatePiece in Piece.pde. Rotation now works for the square, line, and the red S shape.
+
+**6/8:** Josephine: Finished rotatePiece in Piece.pde using rotationCount mod 4 and the rotation arrays. Rotation works for all pieces, but there are still bugs in rotatePiece() in Background.pde when the piece is at the left or right edge of the screen.
