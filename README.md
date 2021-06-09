@@ -42,3 +42,5 @@ Differently shaped tetrominoes fall from the top of the grid. A completed row cl
 **6/8:** Josephine: Finished rotatePiece in Piece.pde using rotationCount mod 4 and the rotation arrays. Rotation works for all pieces, but there are still bugs in rotatePiece() in Background.pde when the piece is at the left or right edge of the screen.
 
 **6/8:** Alexander: Finished rotatePiece() in Background.pde and added a helper method rotateFuture() in Piece.pde.
+
+**6/9:** Josephine: Added ability to pause/unpause. Moved rotation into keyReleased().
