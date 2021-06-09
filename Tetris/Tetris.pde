@@ -5,6 +5,7 @@ int time = 0;
 float targetTime = 50;
 boolean gameOver = false;
 boolean pause = false;
+int pauseCount = 0;
 //WhiteNoise noise;
 
 
@@ -47,7 +48,7 @@ void draw(){
 
     }
     else {
-    if (!pause){
+    if (!pause && pauseCount%2 == 0){
     if (time < targetTime) {
       time++;
     }
@@ -65,7 +66,13 @@ void draw(){
 public void keyPressed(){
   //println(keyCode);
   if (key == ' ') {
-    pause = true;
+    pauseCount++;
+    if (pauseCount%2==0){
+      pause = false;
+    }
+    else{
+      pause = true;
+    }
 
   }
   if(keyCode==UP){
