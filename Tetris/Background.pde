@@ -133,14 +133,20 @@ public class Background{
       for (int i=0; i<p.length ;i++) {
           board[p[i][1]][p[i][0]] = color(0,0,0);
       }
-      /*for (int i=0; i<p.length ;i++) {//needs to be modified to check if the rotation is valid -> checkRotate() for Piece class -> returns array of new ints, check for legality
-        if (p[i][1]+1 > 19) {
+     
+      int[][] coordinates = current.rotateFuture();
+      for (int i=0; i<coordinates.length; i++) {
+        if (coordinates[i][1] > 19 || coordinates[i][1] < 0) {//checks verticality
           legalMove = false; 
         }
-        else if (board[p[i][1]+1][p[i][0]]!=color(0,0,0)) {
+        else if (coordinates[i][0] < 0 || coordinates[i][0] > 9) {//checks horizontal bounds
+          legalMove = false; 
+        }
+        else if (board[p[i][1]][p[i][0]]!=color(0,0,0)) {//checks if space is occupied
           legalMove = false;
         }
-      }*/
+      }
+      
       if (legalMove) {
         current.rotatePiece();
         p = current.getCoords();
@@ -193,7 +199,6 @@ public class Background{
       }
     }
     public void removeFullLine(int row){
-        //stuff
         dropAboveLines(row);
     }
     

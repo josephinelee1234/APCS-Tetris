@@ -195,6 +195,79 @@ public class Piece{
     public color getColor() {
       return c;
     }
+    
+    public int[][] rotateFuture(){
+      int[][] future = new int[4][2];
+      for (int i=0; i<future.length; i++) {
+        future[i][0] = shape[i][0];
+        future[i][1] = shape[i][1];
+      }
+      //same code as rotatePiece but it adds to future instead of shape
+      for (int i=0; i<shape.length; i++) {
+        for (int j=0; j<shape[i].length; j++) {
+          if (rotationCount%2==1) {
+            if (num ==4){
+              future[i][j] += line1[i][j];
+            }
+            if (num==5){
+              future[i][j] += s21[i][j];
+            }
+            if (num==6){
+              future[i][j] += s2[i][j];
+            }
+            if (rotationCount%4==1 && num ==1){
+              future[i][j] += rightL1[i][j];
+            }
+            if (rotationCount%4==3 && num ==1){
+              future[i][j] += rightL3[i][j];
+            }
+            if (rotationCount%4==1 && num ==2){
+              future[i][j] += leftL1[i][j];
+            }
+            if (rotationCount%4==3 && num ==2){
+              future[i][j] += leftL3[i][j];
+            }
+            if (rotationCount%4==1 && num ==3){
+              future[i][j] += tri1[i][j];
+            }
+            if (rotationCount%4==3 && num ==3){
+              future[i][j] += tri3[i][j];
+            }
+          }
+          if (rotationCount%2==0) {
+            if (num ==4) {
+              future[i][j] -= line1[i][j];
+            }
+            if (num==5){
+              future[i][j] -= s21[i][j];
+            }
+            if (num==6){
+              future[i][j] -= s2[i][j];
+            }
+            if (rotationCount%4==2 && num ==1){
+              future[i][j] += rightL2[i][j];
+            }
+            if (rotationCount%4==2 && num ==2){
+              future[i][j] += leftL2[i][j];
+            }
+            if (rotationCount%4==2 && num ==3){
+              future[i][j] += tri2[i][j];
+            }
+            if (rotationCount%4==0 && num ==1){
+              future[i][j] = future[i][j] - (rightL3[i][j]+rightL2[i][j]+rightL1[i][j]) ;
+            }
+            if (rotationCount%4==0 && num ==2){
+              future[i][j] = future[i][j] - (leftL3[i][j]+leftL2[i][j]+leftL1[i][j]) ;
+            }
+            if (rotationCount%4==0 && num ==3){
+              future[i][j] = future[i][j] - (tri3[i][j]+tri2[i][j]+tri1[i][j]) ;
+            }
+
+          }
+        }
+      }
+      return future;
+    }
 
 
 
