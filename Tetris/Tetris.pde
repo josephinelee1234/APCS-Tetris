@@ -63,8 +63,7 @@ void draw(){
     }
 }
 
-public void keyPressed(){
-  //println(keyCode);
+public void keyReleased(){
   if (key == ' ') {
     pauseCount++;
     if (pauseCount%2==0){
@@ -77,7 +76,12 @@ public void keyPressed(){
   }
   if(keyCode==UP){
       bg.rotatePiece();
-      }
+  }
+}
+
+public void keyPressed(){
+  //println(keyCode);
+  
   if(keyCode==RIGHT){
     if (! bg.over()) {
       bg.right();
