@@ -142,7 +142,7 @@ public class Background{
         else if (coordinates[i][0] < 0 || coordinates[i][0] > 9) {//checks horizontal bounds
           legalMove = false; 
         }
-        else if (board[p[i][1]][p[i][0]]!=color(0,0,0)) {//checks if space is occupied
+        else if (board[coordinates[i][1]][coordinates[i][0]]!=color(0,0,0)) {//checks if space is occupied
           legalMove = false;
         }
       }
