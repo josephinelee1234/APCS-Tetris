@@ -40,3 +40,5 @@ Differently shaped tetrominoes fall from the top of the grid. A completed row cl
 **6/7:** Josephine: Worked on rotatePiece in Piece.pde. Rotation now works for the square, line, and the red S shape.
 
 **6/8:** Josephine: Finished rotatePiece in Piece.pde using rotationCount mod 4 and the rotation arrays. Rotation works for all pieces, but there are still bugs in rotatePiece() in Background.pde when the piece is at the left or right edge of the screen.
+
+**6/8:** Alexander: Finished rotatePiece() in Background.pde and added a helper method rotateFuture() in Piece.pde.
