@@ -4,6 +4,7 @@ Piece piece;
 int time = 0;
 float targetTime = 50;
 boolean gameOver = false;
+boolean pause = false;
 //WhiteNoise noise;
 
 
@@ -33,6 +34,7 @@ void draw(){
     }
     fill(200);
     textSize(40);
+    text("Press space to pause", 600,100);
     text("Score: " + bg.getScore(),700,200);
     text("High Score: " + bg.getHighScore(),650,300);
     if (bg.over()) {
@@ -45,6 +47,7 @@ void draw(){
 
     }
     else {
+    if (!pause){
     if (time < targetTime) {
       time++;
     }
@@ -56,10 +59,15 @@ void draw(){
       targetTime-=.01;
     }
     }
+    }
 }
 
 public void keyPressed(){
   //println(keyCode);
+  if (key == ' ') {
+    pause = true;
+
+  }
   if(keyCode==UP){
       bg.rotatePiece();
       }
