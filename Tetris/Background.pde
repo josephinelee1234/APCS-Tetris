@@ -35,11 +35,11 @@ public class Background{
           rect(j*50,i*50,50,50);
         }
       }
-      for (int row=19; row>0; row--) {
+      /*for (int row=19; row>0; row--) {
         if (checkForLine(row)) {
           
         }
-      }
+      }*/
     }
     
     public void right(){
@@ -205,7 +205,7 @@ public class Background{
         for (int i=0; i<10; i++) {
           board[row][i] = color(0,0,0);
         }
-        current = new Piece();
+        //current = new Piece();
       }
       else {
         for (int i=0; i<10; i++) {

@@ -35,7 +35,7 @@ void draw(){
     }
     fill(200);
     textSize(40);
-    text("Press space to pause", 600,100);
+    text("Press space to pause", 550,100);
     text("Score: " + bg.getScore(),700,200);
     text("High Score: " + bg.getHighScore(),650,300);
     if (bg.over()) {
@@ -54,6 +54,11 @@ void draw(){
     }
     else {
       if (! bg.down()) {
+        for (int row=19; row>0; row--) {
+          if (bg.checkForLine(row)) {
+            row++;
+          }
+        }
         bg.newPiece();
       }
       time = 0;
