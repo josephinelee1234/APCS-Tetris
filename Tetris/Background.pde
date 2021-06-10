@@ -170,12 +170,20 @@ public class Background{
     }
     
     public void newPiece() {
-      if (board[0][0] == color(0,0,0) && board[0][1] == color(0,0,0)) {
+      /*if (board[0][0] == color(0,0,0) && board[0][1] == color(0,0,0)) {
         current = new Piece();
       }
       else {
         GameOver = true;
+      }*/
+      current = new Piece();
+      int[][] coords = current.getCoords();
+      for (int i=0; i<coords.length; i++) {
+         if (board[coords[i][1]][coords[i][0]]!=color(0,0,0)) {
+           GameOver = true;
+         }
       }
+      
     }
     
     public boolean checkForLine(int row){
