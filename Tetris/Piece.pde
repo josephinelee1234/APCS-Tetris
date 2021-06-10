@@ -248,7 +248,7 @@ public class Piece{
               future[i][j] -= s21[i][j];
             }
             if (num==6){
-              future[i][j] -= s2[i][j];
+              future[i][j] -= s1[i][j];
             }
             if (rotationCount%4==2 && num ==1){
               future[i][j] += rightL2[i][j];
