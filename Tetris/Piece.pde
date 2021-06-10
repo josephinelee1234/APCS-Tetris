@@ -219,7 +219,7 @@ public class Piece{
               future[i][j] += s21[i][j];
             }
             if (num==6){
-              future[i][j] += s2[i][j];
+              future[i][j] += s1[i][j];//here
             }
             if (rotationCount%4==1 && num ==1){
               future[i][j] += rightL1[i][j];
@@ -240,7 +240,7 @@ public class Piece{
               future[i][j] += tri3[i][j];
             }
           }
-          if (rotationCount%2==0) {
+          else if (rotationCount%2==0) {
             if (num ==4) {
               future[i][j] -= line1[i][j];
             }
@@ -248,7 +248,7 @@ public class Piece{
               future[i][j] -= s21[i][j];
             }
             if (num==6){
-              future[i][j] -= s1[i][j];
+              future[i][j] -= s1[i][j];//here
             }
             if (rotationCount%4==2 && num ==1){
               future[i][j] += rightL2[i][j];
