@@ -4,6 +4,14 @@ Group Name: Tete-a-Tetris <br />
 Group Member names: Alexander Dickerson, Josephine Lee <br />
 # Run/Compile Instructions
 Install the Sound library from the Processing Foundation. Run from Processing.
+
+Controls:
+- UP = rotate
+- LEFT = down
+- RIGHT = right
+- DOWN = down
+- SHIFT = all the way down
+- SPACE = pause
 # Brief Project Description:
 Differently shaped tetrominoes fall from the top of the grid. A completed row clears the row and the remaining blocks above the completed row shift down, and the score increases. The game ends when the user can not play the current piece because the user tries to play a piece that does not fit in the window.
 # Log
@@ -44,3 +52,5 @@ Differently shaped tetrominoes fall from the top of the grid. A completed row cl
 **6/8:** Alexander: Finished rotatePiece() in Background.pde and added a helper method rotateFuture() in Piece.pde.
 
 **6/9:** Josephine: Added ability to pause/unpause. Moved rotation into keyReleased().
+
+**6/9:** Alexander: Fixed several bugs including the infamous green piece, poor rendering of pieces that end the game when they spawn, preventing the player from moving pieces while the game is paused, and correctly handling multiple completed lines at a time.
