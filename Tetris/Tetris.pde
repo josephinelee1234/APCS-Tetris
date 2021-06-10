@@ -77,6 +77,9 @@ public void keyReleased(){
   if(pause==false && keyCode==UP){
       bg.rotatePiece();
   }
+  if(pause==false && keyCode==SHIFT){
+      bg.shiftDownContinuously();
+  }
 }
 
 public void keyPressed(){

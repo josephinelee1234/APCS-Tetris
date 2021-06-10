@@ -127,6 +127,14 @@ public class Background{
       return legalMove;
     }
     
+    public void shiftDownContinuously() {
+      boolean bottom = true;
+      while (bottom) {
+        bottom = down();
+        score+=1;
+      }
+    }
+    
     public void rotatePiece(){      
       int[][] p = current.getCoords();
       boolean legalMove = true;
