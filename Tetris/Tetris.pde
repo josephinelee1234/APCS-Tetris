@@ -74,14 +74,14 @@ public void keyReleased(){
     }
 
   }
-  if(keyCode==UP){
+  if(pause==false && keyCode==UP){
       bg.rotatePiece();
   }
 }
 
 public void keyPressed(){
   //println(keyCode);
-  
+  if (pause==false) {
   if(keyCode==RIGHT){
     if (! bg.over()) {
       bg.right();
@@ -98,6 +98,7 @@ public void keyPressed(){
         bg.increaseScore(1);
       }
     }
+  }
   }
 }
 
