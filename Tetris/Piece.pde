@@ -80,8 +80,11 @@ public class Piece{
             if (num==5){
               shape[i][j] += s21[i][j];
             }
-            if (num==6){
+            /*if (num==6){
               shape[i][j] += s2[i][j];
+            }*/
+            if (num==6){
+              shape[i][j] += s1[i][j];
             }
             if (rotationCount%4==1 && num ==1){
               shape[i][j] += rightL1[i][j];
@@ -107,8 +110,11 @@ public class Piece{
             if (num==5){
               shape[i][j] -= s21[i][j];
             }
-            if (num==6){
+            /*if (num==6){
               shape[i][j] -= s2[i][j];
+            }*/
+            if (num==6){
+              shape[i][j] -= s1[i][j];
             }
             if (rotationCount%4==2 && num ==1){
               shape[i][j] += rightL2[i][j];
