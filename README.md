@@ -53,4 +53,4 @@ Differently shaped tetrominoes fall from the top of the grid. A completed row cl
 
 **6/9:** Josephine: Added ability to pause/unpause. Moved rotation into keyReleased().
 
-**6/9:** Alexander: Fixed several bugs including the infamous green piece, poor rendering of pieces that end the game when they spawn, preventing the player from moving pieces while the game is paused, and correctly handling multiple completed lines at a time.
+**6/9:** Alexander: Fixed several bugs including the infamous green piece, poor rendering of pieces that end the game when they spawn, preventing the player from moving pieces while the game is paused, and correctly handling multiple completed lines at a time. Added shiftDownContinuously().
