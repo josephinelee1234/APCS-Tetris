@@ -4,6 +4,7 @@ public class Background{
     private color[][] board;
     private Piece current;
     private boolean GameOver;
+    private int[][] landing;
 
     
     public Background(){
@@ -20,6 +21,10 @@ public class Background{
       int[][] p = current.getCoords();
       for (int i=0; i<p.length; i++) {
         board[p[i][1]][p[i][0]] = current.getColor();
+      }
+      int[][] l = landing;
+      for (int i=0; i<l.length; i++) {
+        board[l[i][1]][l[i][0]] = color(218,218,218);
       }
     }
     
