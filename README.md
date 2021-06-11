@@ -1,13 +1,13 @@
 # APCS-Tetris
-Prototype: https://docs.google.com/document/d/1BRN-SeDw0srAglKlCprYc-ydPAaK-cCEwl2CCe1ZDyI/edit?usp=sharing <br />
+Design Document: https://docs.google.com/document/d/1BRN-SeDw0srAglKlCprYc-ydPAaK-cCEwl2CCe1ZDyI/edit?usp=sharing <br />
 Group Name: Tete-a-Tetris <br />
 Group Member names: Alexander Dickerson, Josephine Lee <br />
 # Run/Compile Instructions
-Install the Sound library from the Processing Foundation. Run from Processing.
+Run from Processing.
 
 Controls:
 - UP = rotate
-- LEFT = down
+- LEFT = left
 - RIGHT = right
 - DOWN = down
 - SHIFT = all the way down
