@@ -54,10 +54,15 @@ void draw(){
     }
     else {
       if (! bg.down()) {
+        int bonus = -100;
         for (int row=19; row>0; row--) {
           if (bg.checkForLine(row)) {
             row++;
+            bonus+=100;
           }
+        }
+        if (bonus>0) {
+          bg.increaseScore(bonus);
         }
         bg.newPiece();
       }
