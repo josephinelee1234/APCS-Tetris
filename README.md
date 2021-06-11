@@ -55,4 +55,6 @@ Differently shaped tetrominoes fall from the top of the grid. A completed row cl
 
 **6/9:** Alexander: Fixed several bugs including the infamous green piece, poor rendering of pieces that end the game when they spawn, preventing the player from moving pieces while the game is paused, and correctly handling multiple completed lines at a time. Added shiftDownContinuously().
 
-**6/10:** Alexander: Fixed an indexOutOfBounds error for the green piece.
+**6/10:** Alexander: Fixed an indexOutOfBounds error for the green piece. Implemented bonus score system when the user completes multiple rows at a time.
+
+**6/10:** Josephine: Started preview of where the current piece will land. Updated UML diagram and design document.
