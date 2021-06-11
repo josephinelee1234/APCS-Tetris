@@ -155,6 +155,15 @@ public class Background{
         }
       }
       
+      //Janky code to deal with the green piece
+      if (current.getColor()==color(0,200,0)) {
+        for (int i=0; i<p.length; i++) {
+          if (p[i][0]==0) {
+            legalMove = false;
+          }
+        }
+      }
+      
       if (legalMove) {
         current.rotatePiece();
         p = current.getCoords();
